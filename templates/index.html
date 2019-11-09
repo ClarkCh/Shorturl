@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1><a href="https://github.com/ClarkCh/Shorturl">本项目源代码(放置在github)</a></h1><br/><br/><br/>
+<h2>请输入长链接:</h2>
+<form method="post" action={% url 'index' %}>
+    <input name="long_url">
+    <input type="submit" value="提交">
+    {% csrf_token %}
+</form>
+<h2>短链接为:{{ short_url }}</h2>
+</body>
+</html>
