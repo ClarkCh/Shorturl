@@ -69,7 +69,6 @@ def play():
         for i in range(int(lenn/2)):
             id = r.rpop('list')
             url = r.rpop('list').decode('utf-8')
-            # 这里应该有mysql的消息队列可以用才好
             try:
                 status = Url.objects.get(id=t.decode('utf-8'))
             except:
